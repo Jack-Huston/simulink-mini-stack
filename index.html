@@ -4,11 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simulink GN&C Mini-Stack | Jack Huston</title>
+  <title>Simulink GN&amp;C Mini-Stack | Jack Huston</title>
 
   <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
-  <link rel="stylesheet" href="../styles.css"/>
-  <link rel="stylesheet" href="project.css"/>
+  <link rel="stylesheet" href="styles.css"/>
 
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>html{scroll-behavior:smooth}</style>
@@ -18,19 +17,18 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
-      <a class="nav-brand project-brand-link" href="https://jack-huston.com/#projects" aria-label="Back to portfolio">
+      <a class="nav-brand" href="https://jack-huston.com/#projects" aria-label="Back to portfolio">
         <i data-lucide="arrow-left" class="icon-nav"></i>
         <span>Back to Portfolio</span>
       </a>
 
-      <div class="nav-links project-nav-links" aria-label="Project navigation">
+      <div class="nav-links" aria-label="Project navigation">
         <a href="#overview" class="nav-link">Overview</a>
-        <a href="#validation" class="nav-link">Validation</a>
-        <a href="#roadmap" class="nav-link">Roadmap</a>
+        <a href="#status" class="nav-link">Status</a>
         <a href="#contact" class="nav-link">Contact</a>
       </div>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="mobileMenu" aria-expanded="false">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
         <i data-lucide="menu" id="menuIcon"></i>
         <i data-lucide="x" id="closeIcon" style="display:none;"></i>
       </button>
@@ -38,290 +36,214 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
     <a href="#overview" class="mobile-link">Overview</a>
-    <a href="#validation" class="mobile-link">Validation</a>
-    <a href="#roadmap" class="mobile-link">Roadmap</a>
+    <a href="#status" class="mobile-link">Status</a>
     <a href="#contact" class="mobile-link">Contact</a>
     <a href="https://jack-huston.com/#projects" class="mobile-link">Back to Portfolio</a>
   </div>
 
   <!-- Hero -->
-  <section class="project-hero">
-    <div class="project-hero-content container-wide">
-      <div class="project-hero-icon">
-        <i data-lucide="axis-3d" class="project-icon"></i>
+  <header class="hero">
+    <div class="hero-content container-wide">
+      <div class="hero-icon" aria-hidden="true">
+        <i data-lucide="axis-3d" class="icon-hero"></i>
       </div>
 
-      <h1 class="project-hero-title">Simulink GN&amp;C Mini-Stack</h1>
+      <h1 class="hero-title">Simulink GN&amp;C Mini-Stack</h1>
 
-      <p class="project-hero-subtitle">
-        You are looking at a Simulink model for small-satellite reaction wheel attitude control.
-        I model the control loop, sensor noise, and test cases.
+      <p class="hero-subtitle">
+        You are viewing a temporary page for my Simulink attitude control project.
       </p>
 
-      <div class="project-badges" role="list" aria-label="Tags">
-        <span class="project-badge project-badge-wip" role="listitem">
-          <i data-lucide="wrench" class="badge-icon"></i> In progress
+      <div class="hero-tags" role="list" aria-label="Tags">
+        <span class="tag tag-wip" role="listitem">
+          <i data-lucide="wrench" class="tag-icon"></i> In progress
         </span>
-        <span class="project-badge" role="listitem">
-          <i data-lucide="box" class="badge-icon"></i> Simulink
+        <span class="tag" role="listitem">
+          <i data-lucide="box" class="tag-icon"></i> Simulink
         </span>
-        <span class="project-badge" role="listitem">
-          <i data-lucide="compass" class="badge-icon"></i> Attitude Control
+        <span class="tag" role="listitem">
+          <i data-lucide="compass" class="tag-icon"></i> Attitude control
         </span>
-        <span class="project-badge" role="listitem">
-          <i data-lucide="radar" class="badge-icon"></i> Sensor Noise
+        <span class="tag" role="listitem">
+          <i data-lucide="radar" class="tag-icon"></i> Sensor noise
         </span>
-        <span class="project-badge" role="listitem">
-          <i data-lucide="dice-5" class="badge-icon"></i> Monte Carlo
+        <span class="tag" role="listitem">
+          <i data-lucide="dice-5" class="tag-icon"></i> Monte Carlo
         </span>
       </div>
 
-      <div class="project-cta">
+      <div class="hero-cta">
         <a class="btn-primary" href="#overview">
           <i data-lucide="zap"></i>
-          <span>See what is inside</span>
+          <span>See the scope</span>
         </a>
         <a class="btn-secondary" href="#contact">Request details</a>
       </div>
 
-      <div class="status-card" role="note" aria-label="Status">
-        <div class="status-icon">
-          <i data-lucide="info"></i>
-        </div>
-        <div class="status-text">
-          <div class="status-title">Status</div>
-          <div class="status-body">
-            I am preparing diagrams, plots, and a short run guide. If you want a preview, email me.
-          </div>
+      <div class="status-banner" role="note" aria-label="Project note">
+        <i data-lucide="info" class="status-banner-icon" aria-hidden="true"></i>
+        <div class="status-banner-text">
+          I am packaging diagrams, plots, and a short run guide. If you need specifics for your review, email me.
         </div>
       </div>
     </div>
-  </section>
+  </header>
 
   <!-- Overview -->
-  <section id="overview" class="section section-white">
-    <div class="container-wide">
-      <h2 class="section-title">
-        <i data-lucide="target" class="icon-title"></i>
-        Overview
-      </h2>
+  <main>
+    <section id="overview" class="section section-white">
+      <div class="container-wide">
+        <h2 class="section-title">
+          <i data-lucide="target" class="icon-title"></i>
+          Overview
+        </h2>
 
-      <p class="section-subtitle">
-        If you want to assess my Simulink work fast, start here.
-      </p>
+        <p class="section-subtitle">
+          If you are hiring for GN&amp;C or modeling and simulation, this project shows how I build a closed-loop Simulink model and test it with noise and disturbances.
+        </p>
 
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-header">
-            <i data-lucide="cpu" class="feature-icon"></i>
-            <h3 class="feature-title">Plant and actuation</h3>
-          </div>
-          <ul class="feature-list">
-            <li>Small-sat attitude dynamics in 3D</li>
-            <li>Reaction wheel actuation</li>
-            <li>Disturbance cases for robustness checks</li>
-          </ul>
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-header">
+              <i data-lucide="cpu" class="card-icon" aria-hidden="true"></i>
+              <h3 class="card-title">Plant and actuation</h3>
+            </div>
+            <ul class="list">
+              <li>Rigid-body attitude dynamics</li>
+              <li>Reaction wheel actuation and limits</li>
+              <li>Disturbance injection for robustness</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <i data-lucide="radar" class="card-icon" aria-hidden="true"></i>
+              <h3 class="card-title">Sensors and noise</h3>
+            </div>
+            <ul class="list">
+              <li>IMU measurement path with noise terms</li>
+              <li>Star sensor updates with rate effects</li>
+              <li>Bias cases for test runs</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <i data-lucide="settings" class="card-icon" aria-hidden="true"></i>
+              <h3 class="card-title">Control loop</h3>
+            </div>
+            <ul class="list">
+              <li>Signal conditioning into the controller</li>
+              <li>Clear interfaces between subsystems</li>
+              <li>Scenario parameters for repeatable runs</li>
+            </ul>
+          </article>
         </div>
 
-        <div class="feature-card">
-          <div class="feature-header">
-            <i data-lucide="radar" class="feature-icon"></i>
-            <h3 class="feature-title">Sensors and noise</h3>
+        <div class="split">
+          <div class="split-left">
+            <h3 class="mini-title">What you will see once I publish results</h3>
+            <ul class="list">
+              <li>Block diagram with assumptions</li>
+              <li>Tracking error and wheel command plots</li>
+              <li>Disturbance cases and noise sweeps</li>
+              <li>Monte Carlo summary with pass and fail criteria</li>
+            </ul>
           </div>
-          <ul class="feature-list">
-            <li>IMU measurement path with noise terms</li>
-            <li>Star sensor updates with rate effects</li>
-            <li>Bias options for test cases</li>
-          </ul>
+
+          <div class="split-right">
+            <div class="mini">
+              <div class="mini-label">Primary tools</div>
+              <div class="mini-value">Simulink, MATLAB</div>
+            </div>
+            <div class="mini">
+              <div class="mini-label">System</div>
+              <div class="mini-value">Reaction wheel attitude control</div>
+            </div>
+            <div class="mini">
+              <div class="mini-label">Testing</div>
+              <div class="mini-value">Noise, disturbances, Monte Carlo</div>
+            </div>
+          </div>
         </div>
 
-        <div class="feature-card">
-          <div class="feature-header">
-            <i data-lucide="settings" class="feature-icon"></i>
-            <h3 class="feature-title">Onboard pipeline</h3>
+        <div class="placeholder" aria-label="Placeholder content">
+          <div class="placeholder-top">
+            <i data-lucide="image" class="placeholder-icon" aria-hidden="true"></i>
+            <div class="placeholder-title">Results section pending</div>
           </div>
-          <ul class="feature-list">
-            <li>Signal conditioning blocks into the controller</li>
-            <li>Structured interfaces between subsystems</li>
-            <li>Scenario parameters for repeatable runs</li>
-          </ul>
+          <p class="placeholder-text">
+            I will add plots and a short run guide here. You will not need to hunt through files.
+          </p>
         </div>
       </div>
+    </section>
 
-      <div class="quickfacts">
-        <div class="quickfacts-left">
-          <h3 class="quickfacts-title">What you will find on this page</h3>
-          <ul class="quickfacts-list">
-            <li>Block diagram and assumptions</li>
-            <li>Tracking plots and control effort</li>
-            <li>Monte Carlo summary with pass and fail criteria</li>
-          </ul>
-        </div>
+    <!-- Status -->
+    <section id="status" class="section">
+      <div class="container-wide">
+        <h2 class="section-title">
+          <i data-lucide="clipboard-check" class="icon-title"></i>
+          Status
+        </h2>
 
-        <div class="quickfacts-right">
-          <div class="mini-card">
-            <div class="mini-label">Primary tools</div>
-            <div class="mini-value">Simulink, MATLAB</div>
+        <p class="section-subtitle">
+          If you are reviewing this for an interview loop, use this section to decide what to ask for.
+        </p>
+
+        <div class="grid-2">
+          <div class="callout">
+            <h3 class="callout-title">Ready on request</h3>
+            <ul class="list">
+              <li>Model architecture walkthrough</li>
+              <li>Baseline run plots for tracking and control effort</li>
+              <li>Noise and disturbance test cases</li>
+            </ul>
           </div>
-          <div class="mini-card">
-            <div class="mini-label">System</div>
-            <div class="mini-value">Reaction wheel attitude control</div>
-          </div>
-          <div class="mini-card">
-            <div class="mini-label">Testing</div>
-            <div class="mini-value">Noise, disturbances, Monte Carlo</div>
-          </div>
-        </div>
-      </div>
 
-      <div class="placeholder">
-        <div class="placeholder-top">
-          <i data-lucide="image" class="placeholder-icon"></i>
-          <div class="placeholder-title">Diagrams and plots</div>
-        </div>
-        <div class="placeholder-body">
-          I will add a block diagram, then plots for tracking error, wheel commands, and disturbance cases.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Validation -->
-  <section id="validation" class="section">
-    <div class="container-wide">
-      <h2 class="section-title">
-        <i data-lucide="shield-check" class="icon-title"></i>
-        Validation
-      </h2>
-
-      <p class="section-subtitle">
-        I focus on repeatable results and clear metrics.
-      </p>
-
-      <div class="kpi-grid">
-        <div class="kpi-card">
-          <div class="kpi-top">
-            <i data-lucide="crosshair" class="kpi-icon"></i>
-            <div class="kpi-name">Tracking</div>
-          </div>
-          <div class="kpi-desc">Attitude error versus time, settling time, steady-state error.</div>
-        </div>
-
-        <div class="kpi-card">
-          <div class="kpi-top">
-            <i data-lucide="activity" class="kpi-icon"></i>
-            <div class="kpi-name">Control effort</div>
-          </div>
-          <div class="kpi-desc">Wheel torque and speed limits, saturation time, command smoothness.</div>
-        </div>
-
-        <div class="kpi-card">
-          <div class="kpi-top">
-            <i data-lucide="dice-5" class="kpi-icon"></i>
-            <div class="kpi-name">Robustness</div>
-          </div>
-          <div class="kpi-desc">Noise sweeps and disturbance cases, Monte Carlo pass or fail checks.</div>
-        </div>
-
-        <div class="kpi-card">
-          <div class="kpi-top">
-            <i data-lucide="repeat" class="kpi-icon"></i>
-            <div class="kpi-name">Repeatability</div>
-          </div>
-          <div class="kpi-desc">Scenario presets, documented settings, consistent outputs.</div>
-        </div>
-      </div>
-
-      <div class="note-card">
-        <i data-lucide="clipboard-check" class="note-icon"></i>
-        <div class="note-body">
-          <div class="note-title">What you can request today</div>
-          <ul class="note-list">
-            <li>Current block diagram and signal flow</li>
-            <li>Baseline run results and plots</li>
-            <li>Monte Carlo setup and metrics</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Roadmap -->
-  <section id="roadmap" class="section section-white">
-    <div class="container-wide">
-      <h2 class="section-title">
-        <i data-lucide="map" class="icon-title"></i>
-        Roadmap
-      </h2>
-
-      <p class="section-subtitle">
-        I will keep this page short. You will find the important details fast.
-      </p>
-
-      <div class="roadmap">
-        <div class="roadmap-item">
-          <div class="roadmap-dot"></div>
-          <div class="roadmap-content">
-            <div class="roadmap-title">Publish architecture</div>
-            <div class="roadmap-text">Subsystem diagram with signal flow.</div>
-          </div>
-        </div>
-
-        <div class="roadmap-item">
-          <div class="roadmap-dot"></div>
-          <div class="roadmap-content">
-            <div class="roadmap-title">Add results</div>
-            <div class="roadmap-text">Baseline plots plus disturbance cases.</div>
-          </div>
-        </div>
-
-        <div class="roadmap-item">
-          <div class="roadmap-dot"></div>
-          <div class="roadmap-content">
-            <div class="roadmap-title">Document runs</div>
-            <div class="roadmap-text">Short run guide with settings and metrics.</div>
-          </div>
-        </div>
-
-        <div class="roadmap-item">
-          <div class="roadmap-dot"></div>
-          <div class="roadmap-content">
-            <div class="roadmap-title">Monte Carlo summary</div>
-            <div class="roadmap-text">Pass or fail criteria with a small results table.</div>
+          <div class="callout">
+            <h3 class="callout-title">Next publish steps</h3>
+            <ul class="list">
+              <li>Block diagram with signal flow</li>
+              <li>Run guide with parameters and metrics</li>
+              <li>Monte Carlo summary table</li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section contact-section">
-    <div class="contact-glow"></div>
-    <div class="container contact-container">
-      <h2 class="section-title contact-title">Contact</h2>
-      <p class="contact-subtitle">
-        If you want the latest results or model notes, email me.
-      </p>
-      <div class="contact-links">
-        <a class="contact-card" href="mailto:jackthuston1@gmail.com?subject=Simulink%20GN%26C%20Mini-Stack">
-          <i data-lucide="mail" class="icon-contact"></i>
-          <span>Email</span>
-        </a>
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="contact-glow" aria-hidden="true"></div>
 
-        <a class="contact-card" href="https://www.linkedin.com/in/jack-huston/" target="_blank" rel="noopener noreferrer">
-          <i data-lucide="linkedin" class="icon-contact"></i>
-          <span>LinkedIn</span>
-        </a>
+      <div class="container contact-container">
+        <h2 class="section-title contact-title">Contact</h2>
+        <p class="contact-subtitle">
+          If you want the latest results or a short walkthrough, email me.
+        </p>
+
+        <div class="contact-links">
+          <a class="contact-card" href="mailto:jackthuston1@gmail.com?subject=Simulink%20GN%26C%20Mini-Stack">
+            <i data-lucide="mail" class="icon-contact" aria-hidden="true"></i>
+            <span>Email</span>
+          </a>
+
+          <a class="contact-card" href="https://www.linkedin.com/in/jack-huston/" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="linkedin" class="icon-contact" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="footer-content">
       <span>© 2026 Jack Huston.</span>
-      <i data-lucide="satellite" class="icon-footer"></i>
+      <i data-lucide="satellite" class="icon-footer" aria-hidden="true"></i>
       <span>GN&amp;C, modeling, verification.</span>
     </div>
   </footer>
