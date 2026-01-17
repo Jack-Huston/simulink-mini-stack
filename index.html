@@ -6,19 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simulink GN&C Mini-Stack | Jack Huston</title>
 
-  <!-- Your site-wide styles (keeps theme consistent) -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
   <link rel="stylesheet" href="../styles.css"/>
-
-  <!-- Page-specific add-ons -->
   <link rel="stylesheet" href="project.css"/>
 
-  <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>html{scroll-behavior:smooth}</style>
 </head>
 
 <body>
-  <!-- Navigation (same pattern as homepage, simplified) -->
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
       <a class="nav-brand project-brand-link" href="https://jack-huston.com/#projects" aria-label="Back to portfolio">
@@ -26,7 +23,7 @@
         <span>Back to Portfolio</span>
       </a>
 
-      <div class="nav-links project-nav-links">
+      <div class="nav-links project-nav-links" aria-label="Project navigation">
         <a href="#overview" class="nav-link">Overview</a>
         <a href="#validation" class="nav-link">Validation</a>
         <a href="#roadmap" class="nav-link">Roadmap</a>
@@ -49,21 +46,21 @@
     <a href="https://jack-huston.com/#projects" class="mobile-link">Back to Portfolio</a>
   </div>
 
-  <!-- Project Hero (matches homepage vibe) -->
+  <!-- Hero -->
   <section class="project-hero">
     <div class="project-hero-content container-wide">
       <div class="project-hero-icon">
         <i data-lucide="axis-3d" class="project-icon"></i>
       </div>
 
-      <h1 class="project-title">Simulink GN&amp;C Mini-Stack</h1>
+      <h1 class="project-hero-title">Simulink GN&amp;C Mini-Stack</h1>
 
-      <p class="project-subtitle">
-        A 3D Simulink model for small-satellite reaction wheel attitude control, including sensor models
-        (IMU + star sensor), measurement noise, onboard signal processing, and closed-loop control.
+      <p class="project-hero-subtitle">
+        You are looking at a Simulink model for small-satellite reaction wheel attitude control.
+        I model the control loop, sensor noise, and test cases.
       </p>
 
-      <div class="project-badges" role="list" aria-label="Project tags">
+      <div class="project-badges" role="list" aria-label="Tags">
         <span class="project-badge project-badge-wip" role="listitem">
           <i data-lucide="wrench" class="badge-icon"></i> In progress
         </span>
@@ -74,7 +71,7 @@
           <i data-lucide="compass" class="badge-icon"></i> Attitude Control
         </span>
         <span class="project-badge" role="listitem">
-          <i data-lucide="radar" class="badge-icon"></i> Sensor Models
+          <i data-lucide="radar" class="badge-icon"></i> Sensor Noise
         </span>
         <span class="project-badge" role="listitem">
           <i data-lucide="dice-5" class="badge-icon"></i> Monte Carlo
@@ -84,20 +81,19 @@
       <div class="project-cta">
         <a class="btn-primary" href="#overview">
           <i data-lucide="zap"></i>
-          <span>What’s in the model</span>
+          <span>See what is inside</span>
         </a>
-        <a class="btn-secondary" href="#roadmap">What’s coming next</a>
+        <a class="btn-secondary" href="#contact">Request details</a>
       </div>
 
-      <div class="status-card" role="note" aria-label="Temporary landing page status">
+      <div class="status-card" role="note" aria-label="Status">
         <div class="status-icon">
           <i data-lucide="info"></i>
         </div>
         <div class="status-text">
-          <div class="status-title">Temporary landing page</div>
+          <div class="status-title">Status</div>
           <div class="status-body">
-            I’m packaging the model + results for public release (diagrams, plots, and a reproducible run guide).
-            This page will become the “source of truth” once the deliverables are published.
+            I am preparing diagrams, plots, and a short run guide. If you want a preview, email me.
           </div>
         </div>
       </div>
@@ -111,70 +107,71 @@
         <i data-lucide="target" class="icon-title"></i>
         Overview
       </h2>
+
       <p class="section-subtitle">
-        Built to demonstrate a realistic GN&amp;C workflow: plant dynamics + sensors + estimation/signal processing + controller + verification.
+        If you want to assess my Simulink work fast, start here.
       </p>
 
       <div class="feature-grid">
         <div class="feature-card">
           <div class="feature-header">
             <i data-lucide="cpu" class="feature-icon"></i>
-            <h3 class="feature-title">Plant + Actuation</h3>
+            <h3 class="feature-title">Plant and actuation</h3>
           </div>
           <ul class="feature-list">
-            <li>Small-sat attitude dynamics with 3D visualization workflow</li>
-            <li>Reaction wheel actuation (limits/saturation as applicable)</li>
-            <li>Disturbance injection for robustness testing</li>
+            <li>Small-sat attitude dynamics in 3D</li>
+            <li>Reaction wheel actuation</li>
+            <li>Disturbance cases for robustness checks</li>
           </ul>
         </div>
 
         <div class="feature-card">
           <div class="feature-header">
             <i data-lucide="radar" class="feature-icon"></i>
-            <h3 class="feature-title">Sensors + Noise</h3>
+            <h3 class="feature-title">Sensors and noise</h3>
           </div>
           <ul class="feature-list">
-            <li>IMU model (gyro/accel behavior as implemented)</li>
-            <li>Star sensor measurement model + update rate effects</li>
-            <li>Configurable measurement noise and bias terms (where applicable)</li>
+            <li>IMU measurement path with noise terms</li>
+            <li>Star sensor updates with rate effects</li>
+            <li>Bias options for test cases</li>
           </ul>
         </div>
 
         <div class="feature-card">
           <div class="feature-header">
             <i data-lucide="settings" class="feature-icon"></i>
-            <h3 class="feature-title">Onboard Processing</h3>
+            <h3 class="feature-title">Onboard pipeline</h3>
           </div>
           <ul class="feature-list">
-            <li>Signal conditioning blocks feeding the controller</li>
-            <li>Interfaces structured like a flight-style pipeline</li>
-            <li>Scenario parameterization for repeatable runs</li>
+            <li>Signal conditioning blocks into the controller</li>
+            <li>Structured interfaces between subsystems</li>
+            <li>Scenario parameters for repeatable runs</li>
           </ul>
         </div>
       </div>
 
       <div class="quickfacts">
         <div class="quickfacts-left">
-          <h3 class="quickfacts-title">What this demonstrates (for recruiters)</h3>
+          <h3 class="quickfacts-title">What you will find on this page</h3>
           <ul class="quickfacts-list">
-            <li>Model-based development in Simulink (not just “I used it once”)</li>
-            <li>Control loop performance reasoning with noise + disturbances</li>
-            <li>A verification mindset: repeatable scenarios, metrics, and robustness sweeps</li>
+            <li>Block diagram and assumptions</li>
+            <li>Tracking plots and control effort</li>
+            <li>Monte Carlo summary with pass and fail criteria</li>
           </ul>
         </div>
 
         <div class="quickfacts-right">
           <div class="mini-card">
             <div class="mini-label">Primary tools</div>
-            <div class="mini-value">Simulink / MATLAB</div>
+            <div class="mini-value">Simulink, MATLAB</div>
           </div>
           <div class="mini-card">
-            <div class="mini-label">Focus</div>
-            <div class="mini-value">Attitude GN&amp;C</div>
+            <div class="mini-label">System</div>
+            <div class="mini-value">Reaction wheel attitude control</div>
           </div>
           <div class="mini-card">
-            <div class="mini-label">Method</div>
-            <div class="mini-value">Noise + Monte Carlo</div>
+            <div class="mini-label">Testing</div>
+            <div class="mini-value">Noise, disturbances, Monte Carlo</div>
           </div>
         </div>
       </div>
@@ -182,11 +179,10 @@
       <div class="placeholder">
         <div class="placeholder-top">
           <i data-lucide="image" class="placeholder-icon"></i>
-          <div class="placeholder-title">Diagram + plots coming soon</div>
+          <div class="placeholder-title">Diagrams and plots</div>
         </div>
         <div class="placeholder-body">
-          This section will include a block diagram of the model architecture and representative plots
-          (tracking error, control effort, saturation events, and robustness sweeps).
+          I will add a block diagram, then plots for tracking error, wheel commands, and disturbance cases.
         </div>
       </div>
     </div>
@@ -197,19 +193,20 @@
     <div class="container-wide">
       <h2 class="section-title">
         <i data-lucide="shield-check" class="icon-title"></i>
-        Validation approach
+        Validation
       </h2>
+
       <p class="section-subtitle">
-        The point isn’t “it runs.” The point is: the outputs are defensible, repeatable, and stress-tested.
+        I focus on repeatable results and clear metrics.
       </p>
 
       <div class="kpi-grid">
         <div class="kpi-card">
           <div class="kpi-top">
             <i data-lucide="crosshair" class="kpi-icon"></i>
-            <div class="kpi-name">Tracking performance</div>
+            <div class="kpi-name">Tracking</div>
           </div>
-          <div class="kpi-desc">Attitude error vs time; settling time; steady-state error.</div>
+          <div class="kpi-desc">Attitude error versus time, settling time, steady-state error.</div>
         </div>
 
         <div class="kpi-card">
@@ -217,7 +214,7 @@
             <i data-lucide="activity" class="kpi-icon"></i>
             <div class="kpi-name">Control effort</div>
           </div>
-          <div class="kpi-desc">Wheel torque/speed limits; saturation time; command smoothness.</div>
+          <div class="kpi-desc">Wheel torque and speed limits, saturation time, command smoothness.</div>
         </div>
 
         <div class="kpi-card">
@@ -225,7 +222,7 @@
             <i data-lucide="dice-5" class="kpi-icon"></i>
             <div class="kpi-name">Robustness</div>
           </div>
-          <div class="kpi-desc">Noise sweeps + disturbance cases; Monte Carlo pass/fail criteria.</div>
+          <div class="kpi-desc">Noise sweeps and disturbance cases, Monte Carlo pass or fail checks.</div>
         </div>
 
         <div class="kpi-card">
@@ -233,18 +230,18 @@
             <i data-lucide="repeat" class="kpi-icon"></i>
             <div class="kpi-name">Repeatability</div>
           </div>
-          <div class="kpi-desc">Scenario presets; fixed seeds (where used); reproducible results.</div>
+          <div class="kpi-desc">Scenario presets, documented settings, consistent outputs.</div>
         </div>
       </div>
 
       <div class="note-card">
         <i data-lucide="clipboard-check" class="note-icon"></i>
         <div class="note-body">
-          <div class="note-title">What will be published here</div>
+          <div class="note-title">What you can request today</div>
           <ul class="note-list">
-            <li>“How to run” guide + scenario presets</li>
-            <li>Plots for baseline tracking + noise/disturbance sweeps</li>
-            <li>Clear assumptions + limitations (so the model doesn’t over-claim)</li>
+            <li>Current block diagram and signal flow</li>
+            <li>Baseline run results and plots</li>
+            <li>Monte Carlo setup and metrics</li>
           </ul>
         </div>
       </div>
@@ -258,8 +255,9 @@
         <i data-lucide="map" class="icon-title"></i>
         Roadmap
       </h2>
+
       <p class="section-subtitle">
-        The goal is a recruiter-friendly page: quick technical credibility + deeper details for reviewers.
+        I will keep this page short. You will find the important details fast.
       </p>
 
       <div class="roadmap">
@@ -267,7 +265,7 @@
           <div class="roadmap-dot"></div>
           <div class="roadmap-content">
             <div class="roadmap-title">Publish architecture</div>
-            <div class="roadmap-text">Subsystem diagram + block-level explanation (plant/sensors/controller).</div>
+            <div class="roadmap-text">Subsystem diagram with signal flow.</div>
           </div>
         </div>
 
@@ -275,15 +273,15 @@
           <div class="roadmap-dot"></div>
           <div class="roadmap-content">
             <div class="roadmap-title">Add results</div>
-            <div class="roadmap-text">Baseline plots, disturbance rejection cases, and noise sweeps.</div>
+            <div class="roadmap-text">Baseline plots plus disturbance cases.</div>
           </div>
         </div>
 
         <div class="roadmap-item">
           <div class="roadmap-dot"></div>
           <div class="roadmap-content">
-            <div class="roadmap-title">Package reproducible runs</div>
-            <div class="roadmap-text">Parameterized scripts + “one-click” scenarios with documented metrics.</div>
+            <div class="roadmap-title">Document runs</div>
+            <div class="roadmap-text">Short run guide with settings and metrics.</div>
           </div>
         </div>
 
@@ -291,7 +289,7 @@
           <div class="roadmap-dot"></div>
           <div class="roadmap-content">
             <div class="roadmap-title">Monte Carlo summary</div>
-            <div class="roadmap-text">Robustness summary table + pass/fail criteria and takeaways.</div>
+            <div class="roadmap-text">Pass or fail criteria with a small results table.</div>
           </div>
         </div>
       </div>
@@ -304,21 +302,15 @@
     <div class="container contact-container">
       <h2 class="section-title contact-title">Contact</h2>
       <p class="contact-subtitle">
-        Want the latest model status, run guide, or results? Email is best.
+        If you want the latest results or model notes, email me.
       </p>
       <div class="contact-links">
-        <a
-          id="emailLink"
-          class="contact-card"
-          href="mailto:jackthuston1@gmail.com?subject=Simulink%20GN%26C%20Mini-Stack&amp;body=Hi%20Jack,%0D%0A%0D%0A"
-          data-email="jackthuston1@gmail.com"
-          data-mailto="mailto:jackthuston1@gmail.com?subject=Simulink%20GN%26C%20Mini-Stack&amp;body=Hi%20Jack,%0D%0A%0D%0A"
-        >
+        <a class="contact-card" href="mailto:jackthuston1@gmail.com?subject=Simulink%20GN%26C%20Mini-Stack">
           <i data-lucide="mail" class="icon-contact"></i>
-          <span>Email Me</span>
+          <span>Email</span>
         </a>
 
-        <a href="https://www.linkedin.com/in/jack-huston/" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <a class="contact-card" href="https://www.linkedin.com/in/jack-huston/" target="_blank" rel="noopener noreferrer">
           <i data-lucide="linkedin" class="icon-contact"></i>
           <span>LinkedIn</span>
         </a>
@@ -326,87 +318,41 @@
     </div>
   </section>
 
-  <div id="clipboardToast" class="toast" role="status" aria-live="polite" aria-atomic="true">
-    Copied to Clipboard
-  </div>
-
   <footer class="footer">
     <div class="footer-content">
       <span>© 2026 Jack Huston.</span>
       <i data-lucide="satellite" class="icon-footer"></i>
-      <span>Model-based GN&amp;C with verification-first thinking.</span>
+      <span>GN&amp;C, modeling, verification.</span>
     </div>
   </footer>
 
   <script>
     lucide.createIcons();
 
-    // Mobile menu toggle (same as your homepage)
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuIcon = document.getElementById('menuIcon');
     const closeIcon = document.getElementById('closeIcon');
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-      const open = mobileMenu.classList.contains('active');
+    function setMenu(open) {
+      mobileMenu.classList.toggle('active', open);
       mobileMenuBtn.setAttribute('aria-expanded', String(open));
       menuIcon.style.display = open ? 'none' : 'block';
       closeIcon.style.display = open ? 'block' : 'none';
+    }
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const open = !mobileMenu.classList.contains('active');
+      setMenu(open);
     });
 
     document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        mobileMenuBtn.setAttribute('aria-expanded', 'false');
-        menuIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
-      });
+      link.addEventListener('click', () => setMenu(false));
     });
 
-    // Copy email + toast, then open mailto (same behavior as your homepage)
-    const emailLink = document.getElementById('emailLink');
-    const toast = document.getElementById('clipboardToast');
-
-    function showToast() {
-      if (!toast) return;
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 2000);
-    }
-
-    async function copyText(text) {
-      try {
-        if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(text);
-          return true;
-        }
-        const ta = document.createElement('textarea');
-        ta.value = text;
-        ta.setAttribute('readonly', '');
-        ta.style.position = 'fixed';
-        ta.style.left = '-9999px';
-        document.body.appendChild(ta);
-        ta.select();
-        const ok = document.execCommand('copy');
-        document.body.removeChild(ta);
-        return ok;
-      } catch {
-        return false;
-      }
-    }
-
-    if (emailLink) {
-      emailLink.addEventListener('click', async (e) => {
-        e.preventDefault();
-        const email = emailLink.dataset.email;
-        const mailto = emailLink.dataset.mailto;
-        const copied = await copyText(email);
-        if (copied) showToast();
-        setTimeout(() => { window.location.href = mailto; }, 60);
-      });
-    }
-
-    setTimeout(() => lucide.createIcons(), 100);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setMenu(false);
+    });
   </script>
 </body>
 </html>
